@@ -19,6 +19,8 @@ public class ElementFetch {
 			return BaseTest.driver.findElement(By.id(identifierValue));
 		case "NAME":
 			return BaseTest.driver.findElement(By.name(identifierValue));
+		case "TAG":
+			return BaseTest.driver.findElement(By.tagName(identifierValue));
 
 		default:
 			return null;

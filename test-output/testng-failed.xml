@@ -7,11 +7,12 @@
     <classes>
       <class name="qaTests.Tests1">
         <methods>
-          <include name="afterMethod"/>
           <include name="beforeTest"/>
+          <include name="afterMethod"/>
           <include name="afterTest"/>
           <include name="beforeMethod"/>
-          <include name="VerificationOfAddNomineeButton"/>
+          <include name="VerificationOfExploreDropdown"/>
+          <include name="VerificationWhetherTheEnteredAmountIsSubtractedFromAvailableAmount"/>
         </methods>
       </class> <!-- qaTests.Tests1 -->
     </classes>

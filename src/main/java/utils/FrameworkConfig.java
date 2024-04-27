@@ -29,5 +29,7 @@ public interface FrameworkConfig extends Config {
 
 	@Key("${environment}.url")
 	String url();
+	
+	
 
 }
