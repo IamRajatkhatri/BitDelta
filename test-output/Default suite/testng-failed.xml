@@ -9,7 +9,7 @@
           <include name="afterMethod"/>
           <include name="afterTest"/>
           <include name="beforeMethod"/>
-          <include name="VerificationOfExploreDropdown"/>
+          <include name="VerificationWhetherTheEnteredAmountIsSubtractedFromAvailableAmount"/>
         </methods>
       </class> <!-- qaTests.Tests1 -->
     </classes>

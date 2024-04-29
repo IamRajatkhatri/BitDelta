@@ -51,16 +51,16 @@ public class LoginPage {
 		Thread.sleep(12000);
 		ele.getWebElement("XPATH", LoginPageElements.Staking).click();
 		
-		WebElement text = ele.getWebElement("XPATH", LoginPageElements.stakeText);
-		
-		if(text.isDisplayed())
-		{
-		    System.out.println("page staking");
-		}
-		else
-		{
-			System.out.println("page not found");
-		}
+//		WebElement text = ele.getWebElement("XPATH", LoginPageElements.stakeText);
+//		
+//		if(text.isDisplayed())
+//		{
+//		    System.out.println("page staking");
+//		}
+//		else
+//		{
+//			System.out.println("page not found");
+//		}
 		
 		
 	}

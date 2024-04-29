@@ -21,8 +21,6 @@ public class Tests1 extends BaseTest {
 		login.VerificationOfLoginFunction();
 		Thread.sleep(12000);
 		Thread.sleep(5000);
-
-		
 	}
 	
 	@Test
