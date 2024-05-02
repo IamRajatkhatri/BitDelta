@@ -5,7 +5,7 @@
     <parameter name="environment" value="dev"/>
     <parameter name="browser" value="edge"/>
     <classes>
-      <class name="qaTests.Tests1">
+      <class name="qaTests.Test2">
         <methods>
           <include name="beforeTest"/>
           <include name="afterMethod"/>
@@ -13,7 +13,7 @@
           <include name="beforeMethod"/>
           <include name="VerificationWhetherTheEnteredAmountIsSubtractedFromAvailableAmount"/>
         </methods>
-      </class> <!-- qaTests.Tests1 -->
+      </class> <!-- qaTests.Test2 -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

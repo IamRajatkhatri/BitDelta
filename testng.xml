@@ -3,9 +3,10 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
 	<parameter name="browser" value="edge"></parameter>
-	 	<parameter name="environment" value="dev" />  
+	 	<parameter name="environment" value="dev" />
     <classes>
-      <class name="qaTests.Tests1"/>
+      <class name="qaTests.Test2"/>
+      <!-- <class name="qaTests.Tests1"/> -->
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

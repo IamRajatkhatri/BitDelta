@@ -1,18 +1,31 @@
 package qaTests;
 
 
+
 import org.testng.annotations.Test;
 
 import base.BaseTest;
 import pageEvent.LoginPage;
+
 import pageEvent.NomineePage;
 
-import utils.ElementFetch;
+import utils.ElementFetch2;
+
 
 public class Tests1 extends BaseTest {
-	ElementFetch ele = new ElementFetch();
-	NomineePage nominee = new NomineePage();
-	LoginPage login = new LoginPage();
+	
+    ElementFetch2 ele;
+    NomineePage nominee = new NomineePage();
+    LoginPage login = new LoginPage();
+    
+    
+    @Test
+    public void VerificationofAddNomineeButton() throws InterruptedException {
+    	nominee.clickOnAddNominee();
+		login.VerificationOfLoginFunction();
+		Thread.sleep(14000);
+		
+    }
 	
 	@Test
 	public void VerificationOfAddNomineeButton () throws InterruptedException {
@@ -20,7 +33,6 @@ public class Tests1 extends BaseTest {
 		nominee.clickOnAddNominee();
 		login.VerificationOfLoginFunction();
 		Thread.sleep(12000);
-		Thread.sleep(5000);
 	}
 	
 	@Test
@@ -45,13 +57,13 @@ public class Tests1 extends BaseTest {
 	}
 	
 	
-//	@Test
-//	public void VerificationOfLoginButton() throws InterruptedException {
-//		nominee.clickOnAddNominee();
-//		login.VerificationOfLoginFunction();
-//		//login.addWait();
-//		//Thread.sleep(11000);
-//		
-//	}
+	@Test
+	public void VerificationOfLoginButton() throws InterruptedException {
+		nominee.clickOnAddNominee();
+		login.VerificationOfLoginFunction();
+		//login.addWait();
+		//Thread.sleep(11000);
+		
+	}
 
 }

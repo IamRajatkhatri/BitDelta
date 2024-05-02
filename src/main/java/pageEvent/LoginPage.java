@@ -1,5 +1,7 @@
 package pageEvent;
 
+import java.time.Duration;
+import java.util.concurrent.TimeUnit;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -30,18 +32,6 @@ public class LoginPage {
 		
 	}
 
-//	public void FillOTP() throws InterruptedException {
-//		for (int index = 0; index <= 5; index++) {
-//
-//			// Construct the modified locator
-//			String modifiedLocator = "//*[@id=\"pin-input-:Rcrd9mkpf9jda:-" + index + "\"]";
-//
-//			// WebElement otpField = driver.findElement(By.xpath(modifiedLocator));
-//			ele.getWebElement("XPATH", modifiedLocator).sendKeys(Integer.toString(index+1));
-//
-//		}
-//
-//	}
 	
 	public void verifyDropdownOfExplore(WebDriver driver) throws InterruptedException
 	{
@@ -51,17 +41,6 @@ public class LoginPage {
 		Thread.sleep(12000);
 		ele.getWebElement("XPATH", LoginPageElements.Staking).click();
 		
-//		WebElement text = ele.getWebElement("XPATH", LoginPageElements.stakeText);
-//		
-//		if(text.isDisplayed())
-//		{
-//		    System.out.println("page staking");
-//		}
-//		else
-//		{
-//			System.out.println("page not found");
-//		}
-		
 		
 	}
 	
@@ -70,13 +49,13 @@ public class LoginPage {
 		WebElement stakebtn = ele.getWebElement("XPATH", LoginPageElements.stakeNowBtn);
 		stakebtn.click();
 	
-		    // Find the "Lock Amount" text field and enter an amount
-		    WebElement lockAmountField = ele.getWebElement("XPATH", LoginPageElements.LockAmountbtn);
+		    
+		    WebElement lockAmountField = ele.getWebElement("CSS", LoginPageElements.LockAmountbtn);
 		    double amountToStake = 0.03; // Enter the amount you want to stake
 		    lockAmountField.sendKeys(String.valueOf(amountToStake));
 		    System.out.println("amount entered");
 
-		    // Find the "Available Amount" text in the popup and get the initial available amount
+		    
 		    WebElement availableAmountText = ele.getWebElement("XPATH", LoginPageElements.AvailableAmount);
 		    double initialAvailableAmount = extractBitcoinValue(availableAmountText.getText());
 		    System.out.println(initialAvailableAmount);
@@ -87,13 +66,12 @@ public class LoginPage {
 		    checkbox.click();
 		    System.out.println("checkbox ticked");
 
-		    // Click the "Stake" button in the popup
+		   
 		    WebElement stakeButton = ele.getWebElement("XPATH", LoginPageElements.StakeEndButton);
 		    stakeButton.click();
 		    System.out.println("button pressed");
-		    Thread.sleep(10000);
-
-		    // Find the "Available Amount" text in the main page and verify it is updated correctly
+		    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(7));
+		  
 		    WebElement updatedAvailableAmountText = ele.getWebElement("XPATH", LoginPageElements.AvailableAmount);
 		    System.out.println(updatedAvailableAmountText);
 		    double expectedAvailableAmount = initialAvailableAmount - amountToStake;
@@ -115,19 +93,5 @@ public class LoginPage {
 	}
 }
 	
-	
-//	public void drawBorder(WebElement element,WebDriver driver)
-//	{
-//		js = ((JavascriptExecutor) driver);
-//		js.executeScript("argument[0].style.border = '3px solid red'",ele);
-//	}
-//	
-//	public void verifyPasswordIcon()
-//	{
-//		ele.getWebElement("CSS", LoginPageElements.loginPage).click();
-//		 ele.getWebElement("CSS",LoginPageElements.passwordField ).sendKeys("qwer");
-//		 WebElement passIcon = ele.getWebElement("CSS", LoginPageElements.passicon);
-////		 drawBorder(passIcon);
-//		 
-//	}
+
 

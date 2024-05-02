@@ -103,7 +103,7 @@
                     <div class="method-list-content failed suite-Suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="qaTests.Tests1" class="method navigator-link" hash-for-method="VerificationWhetherTheEnteredAmountIsSubtractedFromAvailableAmount">VerificationWhetherTheEnteredAmountIsSubtractedFromAvailableAmount</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="qaTests.Test2" class="method navigator-link" hash-for-method="VerificationWhetherTheEnteredAmountIsSubtractedFromAvailableAmount">VerificationWhetherTheEnteredAmountIsSubtractedFromAvailableAmount</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Suite -->
@@ -121,7 +121,7 @@
           <div class="suite-Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">qaTests.Tests1</span>
+              <span class="class-name">qaTests.Test2</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
@@ -129,15 +129,15 @@
                   <a name="VerificationWhetherTheEnteredAmountIsSubtractedFromAvailableAmount">
                   </a> <!-- VerificationWhetherTheEnteredAmountIsSubtractedFromAvailableAmount -->
                   <span class="method-name">VerificationWhetherTheEnteredAmountIsSubtractedFromAvailableAmount</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;/html/body/div[7]/div[3]/div/section/div/div[4]/p&quot;}
-  (Session info: MicrosoftEdge=124.0.2478.51)
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;css-rp047g&apos;]/p&quot;}
+  (Session info: MicrosoftEdge=124.0.2478.67)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: &apos;4.18.1&apos;, revision: &apos;b1d3319b48&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.10&apos;
 Driver info: org.openqa.selenium.edge.EdgeDriver
-Command: [b42ad0548e7997afe8ab878e32f7299f, findElement {using=xpath, value=/html/body/div[7]/div[3]/div/section/div/div[4]/p}]
-Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 124.0.2478.51, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:57471}, msedge: {msedgedriverVersion: 124.0.2478.67 (d385ef2844e0..., userDataDir: C:\Users\TESTRIG\AppData\Lo...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57471/devtoo..., se:cdpVersion: 124.0.2478.51, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: b42ad0548e7997afe8ab878e32f7299f
+Command: [1dca7474f68b495e351b68d097dc60e9, findElement {using=xpath, value=//div[@class=&apos;css-rp047g&apos;]/p}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 124.0.2478.67, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:63936}, msedge: {msedgedriverVersion: 124.0.2478.67 (d385ef2844e0..., userDataDir: C:\Users\TESTRIG\AppData\Lo...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63936/devtoo..., se:cdpVersion: 124.0.2478.67, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 1dca7474f68b495e351b68d097dc60e9
 	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
@@ -149,9 +149,11 @@ Session ID: b42ad0548e7997afe8ab878e32f7299f
 	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
-	at utils.ElementFetch.getWebElement(ElementFetch.java:15)
-	at pageEvent.LoginPage.newStake(LoginPage.java:97)
-	at qaTests.Tests1.VerificationWhetherTheEnteredAmountIsSubtractedFromAvailableAmount(Tests1.java:46)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy27.getText(Unknown Source)
+	at utils.ElementFetch2.newStake(ElementFetch2.java:95)
+	at qaTests.Test2.VerificationWhetherTheEnteredAmountIsSubtractedFromAvailableAmount(Test2.java:43)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 ... Removed 32 stack frames
 </div> <!-- stack-trace -->
@@ -173,7 +175,7 @@ Session ID: b42ad0548e7997afe8ab878e32f7299f
     &lt;parameter name=&quot;environment&quot; value=&quot;dev&quot;/&gt;
     &lt;parameter name=&quot;browser&quot; value=&quot;edge&quot;/&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;qaTests.Tests1&quot;/&gt;
+      &lt;class name=&quot;qaTests.Test2&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
@@ -216,8 +218,8 @@ data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'VerificationWhetherTheEnteredAmountIsSubtractedFromAvailableAmount')
-data.setCell(0, 2, 'qaTests.Tests1')
-data.setCell(0, 3, 64383);
+data.setCell(0, 2, 'qaTests.Test2')
+data.setCell(0, 3, 60187);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
@@ -248,28 +250,28 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">qaTests.Tests1</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">qaTests.Test2</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">beforeTest</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-method before">
-                <span class="method-name">beforeMethod(edge, dev, public void qaTests.Tests1.VerificationWhetherTheEnteredAmountIsSubtractedFromAvailableAm...)</span>
-                <span class="method-start">628 ms</span>
+                <span class="method-name">beforeMethod(edge, dev, public void qaTests.Test2.VerificationWhetherTheEnteredAmountIsSubtractedFromAvailableAmo...)</span>
+                <span class="method-start">660 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">VerificationWhetherTheEnteredAmountIsSubtractedFromAvailableAmount</span>
-                <span class="method-start">9479 ms</span>
+                <span class="method-start">6821 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod([TestResult name=VerificationWhetherTheEnteredAmountIsSubtractedFromAvailableAmount status=FAILURE m...)</span>
-                <span class="method-start">73956 ms</span>
+                <span class="method-start">67037 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method after">
                 <span class="method-name">afterTest</span>
-                <span class="method-start">75498 ms</span>
+                <span class="method-start">68519 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
