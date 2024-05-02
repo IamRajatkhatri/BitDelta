@@ -8,18 +8,19 @@ import base.BaseTest;
 import pageEvent.LoginPage;
 import pageEvent.NomineePage;
 import utils.ElementFetch2;
+import utils.ElementFetchNominee;
 
 public class Test2 extends BaseTest {
 	
 	ElementFetch2 ele;
-	NomineePage nominee = new NomineePage();
-	LoginPage login = new LoginPage();
-
+	ElementFetchNominee nominee;
+	
 
 	@Test
 	public void VerificationofAddNomineeButton() throws InterruptedException {
-		ele = new ElementFetch2(driver); // Initialize ele with driver after it's properly initialized
-		nominee.clickOnAddNominee();
+		ele = new ElementFetch2(driver); 
+		nominee = new ElementFetchNominee(driver);// Initialize ele with driver after it's properly initialized
+		nominee.ClickOnAddNomineeButton();
 		ele.enterEmail("aranjan@qamentor.com");
 		ele.enterPassword("Qamentor@2024");
 		ele.clickLoginButton();
@@ -33,7 +34,8 @@ public class Test2 extends BaseTest {
 	public void VerificationWhetherTheEnteredAmountIsSubtractedFromAvailableAmount() throws InterruptedException
 	{
 		ele = new ElementFetch2(driver);
-		nominee.clickOnAddNominee();
+		nominee = new ElementFetchNominee(driver);// Initialize ele with driver after it's properly initialized
+		nominee.ClickOnAddNomineeButton();
 		ele.enterEmail("aranjan@qamentor.com");
 		ele.enterPassword("Qamentor@2024");
 		ele.clickLoginButton();
